@@ -1,4 +1,3 @@
-import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -23,6 +22,30 @@ export default function Slider() {
       imgSrc: "../../public/slider/img4.png",
       text: "Slide 4",
     },
+    {
+      imgSrc: "../../public/slider/img5.png",
+      text: "Slide 4",
+    },
+    {
+      imgSrc: "../../public/slider/img6.png",
+      text: "Slide 4",
+    },
+    {
+      imgSrc: "../../public/slider/img7.png",
+      text: "Slide 4",
+    },
+    {
+      imgSrc: "../../public/slider/img8.png",
+      text: "Slide 4",
+    },
+    {
+      imgSrc: "../../public/slider/img10.png",
+      text: "Slide 4",
+    },
+    {
+      imgSrc: "../../public/slider/img11.png",
+      text: "Slide 4",
+    },
   ];
 
   return (
@@ -41,12 +64,16 @@ export default function Slider() {
         }}
         navigation={true}
         modules={[Pagination, Navigation, Autoplay]}
-        className="mySwiper h-[100vh] bg-red-300 "
+        className="mySwiper h-[100vh]  "
       >
         {slides.map((slider, index) => {
           return (
             <SwiperSlide key={index}>
-              <img src={slider.imgSrc} alt={slider.text}  className="h-full w-full"/>
+              <img
+                src={slider.imgSrc}
+                alt={slider.text}
+                className="h-full w-full object-cover"
+              />
             </SwiperSlide>
           );
         })}

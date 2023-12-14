@@ -2,10 +2,10 @@ import Hero from "./components/Hero";
 
 function App() {
   return (
-     <div className="">
-        <Hero />
-     </div>
-  )
+    <div className="h-[300vh]">
+      <Hero />
+    </div>
+  );
 }
 
 export default App;
