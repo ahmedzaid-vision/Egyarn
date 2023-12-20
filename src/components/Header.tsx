@@ -4,7 +4,6 @@ import { MdOutlineMenu, MdOutlineClose } from "react-icons/md";
 import logo from "../../public/logo.png";
 import { Link } from "react-router-dom";
 
-
 const Header = () => {
   const navLinks = [
     { text: "Home", route: "/" },
@@ -15,7 +14,6 @@ const Header = () => {
     { text: "Careers", route: "/careers" },
     { text: "Contact Us", route: "/contact-us" },
   ];
-
   const [menuOpen, setMenuOpen] = useState(false);
   const [hoverLink, setHoverLink] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -49,14 +47,14 @@ const Header = () => {
   return (
     <div>
       <header
-        className={` px-8 border-b py-3  fixed  w-full z-50  shadow-md ${
-          scrolled ? "bg-white text-[#242323]" : "text-white"
+        className={` px-8 border-b py-3  bg-white fixed top-0  w-full z-50  shadow-md ${
+          scrolled ? " " : ""
         }`}
         ref={headerRef}
       >
         {/* <SearchBar /> */}
         <div className="container mx-auto flex justify-between items-center">
-          <Link to={'/'} className="">
+          <Link to={"/"} className="">
             <img
               src={logo}
               alt="Square Contracting Logo"
@@ -65,10 +63,8 @@ const Header = () => {
           </Link>
           {/* Navigation as */}
           <nav
-            className={`hidden lg:flex items-center gap-10  mb-3 ${
-              scrolled ? " " : ""
-            } 
-         
+            className={`hidden lg:flex items-center gap-10  mb-3 
+            
           } `}
           >
             {navLinks.map((navLink, index) => {
@@ -91,15 +87,15 @@ const Header = () => {
           <div className="text-2xl block lg:hidden cursor-pointer ">
             <div
               className={` ${
-                scrolled ? "text-[#242323] mb-1 " : "text-white mb-6"
-              }  ${menuOpen ? "hidden" : "block text-white "} `}
+                scrolled ? "" : ""
+              }  ${menuOpen ? "hidden" : "block  "} `}
               onClick={() => setMenuOpen(!menuOpen)}
             >
               <MdOutlineMenu />
             </div>
             <div
               className={` ${
-                menuOpen ? "bloc text-black" : "hidden"
+                menuOpen ? "block " : "hidden"
               } relative z-40 mb-0`}
               onClick={() => setMenuOpen(!menuOpen)}
             >
@@ -122,7 +118,6 @@ const Header = () => {
           </div>
         </div>
       </header>
-     
     </div>
   );
 };

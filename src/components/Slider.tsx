@@ -48,7 +48,7 @@ export default function Slider() {
     },
   ];
 
-  return (
+  return (       
     <>
       <Swiper
         slidesPerView={1}
@@ -64,7 +64,7 @@ export default function Slider() {
         }}
         navigation={true}
         modules={[Pagination, Navigation, Autoplay]}
-        className="mySwiper h-[100vh]  "
+        className="mySwiper h-[90vh]  "
       >
         {slides.map((slider, index) => {
           return (

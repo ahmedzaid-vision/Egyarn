@@ -1,10 +1,8 @@
-import Header from "./Header";
 import Slider from "./Slider";
 
 function Hero() {
   return (
-    <div className="h-[100vh] relative ">
-      <Header />
+    <div className="  mt-[80px]   lg:mt-[105px] ">
       <Slider />
     </div>
   );
