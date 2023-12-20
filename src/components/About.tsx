@@ -66,7 +66,7 @@ const AboutUs = () => {
       </div>
       {/* Third Row: Text */}
       <div className="container mx-auto mt-8">
-        <div className=" text-[#5b5e60]  text-xl">Our MISSION</div>
+        <div className=" text-2xl mb-2">Our MISSION</div>
         <p className="text-xl text-[#777777]">
           EGYYARN is committed to operating a successful business by developing,
           manufacturing, marketing and supporting quality yarn products for the
@@ -77,6 +77,29 @@ const AboutUs = () => {
           our competitive position through leading edge technology Providing a
           safe, fulfilling, and rewarding work environment for our employees,
           and Serving and supporting the communities in which we operate.
+        </p>
+      </div>
+      <div className="container mx-auto mt-8">
+        <div className=" text-2xl mb-2">Our Vision</div>
+        <p className="text-xl text-[#777777]">
+          With a strong commitment to quality and customer satisfaction, our
+          vision encompasses the following: To be one of the most admired
+          textile companies which follows and supports sustainable environmental
+          friendly processes right from cotton cultivation to Product
+          distribution; practices high level of integrity and fairness in
+          dealing with all the stake holders. To remain focused on developing
+          Specialty and Technical products for safety and functional wear.
+        </p>
+      </div>
+      <div className="container mx-auto mt-8">
+        <div className=" text-2xl mb-2">Our Facility</div>
+        <p className="text-xl text-[#777777]">
+          EGYYARN pursues continuous improvement in its product's quality and
+          productivity to achieve total customer satisfaction. Egyyarn
+          constantly upgrades its working methodologies to exceed its customer's
+          requirements. 100% of the cotton is tested using HVI instruments and
+          issued for mixing using a Bale management system, which ensures a
+          narrow band of average yellowness and micronaire values.
         </p>
       </div>
     </section>

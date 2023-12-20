@@ -7,6 +7,11 @@ import AboutPage from "../pages/AboutPage";
 import TechnologyPage from "../pages/TechnologyPage";
 import QualityAssurancePage from "../pages/QualityAssurancePage";
 import CareersPage from "../pages/CareersPage";
+import YarnPage from "../pages/YarnPage";
+import KnittingPage from "../pages/KnittingPage";
+import CarmentsPage from "../pages/CarMentsPage";
+import ContactPage from "../pages/CotactUsPage";
+
 
 function Layout() {
   return (
@@ -18,6 +23,10 @@ function Layout() {
         <Route path="/technology" element={<TechnologyPage />} />
         <Route path="/quality-assurance" element={<QualityAssurancePage />} />
         <Route path="/careers" element={<CareersPage />} />
+        <Route path="/yarn" element={<YarnPage/>} />
+        <Route path="/knitting" element={<KnittingPage />} />
+        <Route path="/carments" element={<CarmentsPage />} />
+        <Route path="/contact" element={<ContactPage />} />
       </Routes>
       <Contact />
       <Footer />

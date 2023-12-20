@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { MdOutlineMenu, MdOutlineClose } from "react-icons/md";
-
 import logo from "../../public/logo.png";
 import { Link } from "react-router-dom";
+import Menu from "./Menu";
 
 const Header = () => {
   const navLinks = [
@@ -12,7 +12,7 @@ const Header = () => {
     { text: "Technology", route: "/technology" },
     { text: "Quality Assurance", route: "/quality-assurance" },
     { text: "Careers", route: "/careers" },
-    { text: "Contact Us", route: "/contact-us" },
+    { text: "Contact Us", route: "/contact" },
   ];
   const [menuOpen, setMenuOpen] = useState(false);
   const [hoverLink, setHoverLink] = useState(false);
@@ -78,7 +78,7 @@ const Header = () => {
                   onMouseEnter={() => setHoverLink(!hoverLink)}
                   onMouseLeave={() => setHoverLink(!hoverLink)}
                 >
-                  {navLink.text}
+                  {navLink.route == "/products" ? <Menu /> : navLink.text}
                 </Link>
               );
             })}
@@ -86,9 +86,9 @@ const Header = () => {
           {/* toggleMenu  */}
           <div className="text-2xl block lg:hidden cursor-pointer ">
             <div
-              className={` ${
-                scrolled ? "" : ""
-              }  ${menuOpen ? "hidden" : "block  "} `}
+              className={` ${scrolled ? "" : ""}  ${
+                menuOpen ? "hidden" : "block  "
+              } `}
               onClick={() => setMenuOpen(!menuOpen)}
             >
               <MdOutlineMenu />
@@ -106,14 +106,18 @@ const Header = () => {
           <div
             className={`${
               menuOpen ? " scale-x-100" : " scale-x-0"
-            } absolute right-0 top-0 bg-white text-black w-[300px] duration-300 h-[100vh] shadow-lg transition-transform transform origin-top-right z-30`}
+            } absolute right-0 top-0 bg-white text-black w-[70%]  lg:w-[40%] duration-300 h-[100vh] shadow-lg transition-transform transform origin-top-right z-30`}
           >
-            <div className="mt-28 p-4 flex flex-col text-[11px] font-bold ">
-              <div className="border-b mb-2 pb-2">
-                <a href="#home" className=" py-3  font-bold">
-                  Home
-                </a>
-              </div>
+            <div className="mt-28 p-4 flex flex-col font-600  ">
+              {navLinks.map((navLink, index) => {
+                return (
+                  <div className="border-b mb-2 pb-2">
+                    <Link to={navLink.route} key={index} className="py-3">
+                      {navLink.route == "/product" ? <Menu /> : navLink.text}
+                    </Link>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
